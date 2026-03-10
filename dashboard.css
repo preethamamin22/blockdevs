@@ -178,3 +178,89 @@
     color: var(--text-secondary);
     margin-bottom: 6px;
 }
+
+/* Questions Section */
+.questions-section {
+    padding: 40px 0;
+}
+
+.section-title {
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.question-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.question-card {
+    padding: 24px;
+}
+
+.question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.timestamp {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    display: block;
+}
+
+.tag.pill {
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(45, 91, 255, 0.1);
+    color: var(--accent-color);
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+.question-body h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.question-body p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.question-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
