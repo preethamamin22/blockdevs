@@ -173,6 +173,19 @@
                 formContainer.style.display = formContainer.style.display === 'none' ? 'block' : 'none';
             });
 
+            // Initialize data if needed
+            function initAdminData() {
+                if (!localStorage.getItem('bd_courses')) {
+                    const initialCourses = [
+                        { id: 1, title: 'Ethereum Programming', subtitle: 'The Solidity Mastery Course', progress: 65, tag: 'Ethereum', students: '12,500' },
+                        { id: 2, title: 'Solana Development', subtitle: 'Rust & Anchor Framework', progress: 20, tag: 'Solana', students: '8,200' },
+                        { id: 3, title: 'Web3 Integration', subtitle: 'Metamask & Ethers.js', progress: 0, tag: 'Web3', students: '3,100' }
+                    ];
+                    localStorage.setItem('bd_courses', JSON.stringify(initialCourses));
+                }
+            }
+            initAdminData();
+
             // Load courses from LocalStorage
             function loadCourses() {
                 const courses = JSON.parse(localStorage.getItem('bd_courses')) || [];

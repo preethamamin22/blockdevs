@@ -24,12 +24,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Login/Dashboard Redirect
+    // 3. Login Modal Logic
+    const loginModal = document.getElementById('login-modal');
     const loginBtn = document.getElementById('login-btn');
-    if (loginBtn) {
+    const closeModal = document.getElementById('close-modal');
+    const loginForm = document.getElementById('login-form');
+
+    if (loginBtn && loginModal) {
         loginBtn.addEventListener('click', () => {
-            window.location.href = 'dashboard.html';
+            loginModal.style.display = 'flex';
         });
+
+        if (closeModal) {
+            closeModal.addEventListener('click', () => {
+                loginModal.style.display = 'none';
+            });
+        }
+
+        // Close on outside click
+        window.addEventListener('click', (e) => {
+            if (e.target === loginModal) {
+                loginModal.style.display = 'none';
+            }
+        });
+
+        // 4. Authentication Simulation
+        if (loginForm) {
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const user = document.getElementById('username').value.toLowerCase();
+                const pass = document.getElementById('password').value;
+
+                if (user === 'admin' && pass === 'admin') {
+                    // Redirect to Admin Panel
+                    window.location.href = 'admin.html';
+                } else if (user && pass) {
+                    // Simple redirect for any other credentials
+                    window.location.href = 'dashboard.html';
+                } else {
+                    alert('Please enter both username and password.');
+                }
+            });
+        }
     }
 
     // Course Card Click -> Player
@@ -39,14 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. FAQ Accordion Logic
+    // 5. FAQ Accordion Logic
     document.querySelectorAll('.faq-question').forEach(q => {
         q.addEventListener('click', () => {
             const item = q.parentElement;
-            // Toggle active class
             item.classList.toggle('active');
 
-            // Optional: Close others
             document.querySelectorAll('.faq-item').forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.classList.remove('active');
@@ -55,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Admin Logic (Simulation)
+    // 6. Admin Logic (Initial Setup)
     initAdminData();
 
     console.log('Block Devs Engine: Online');
