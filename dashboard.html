@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Block Devs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body class="dashboard-page">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="/logo.png" alt="Logo">
+                <span>Block Devs</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="active"><i class="icon-dashboard"></i> Dashboard</a>
+                <a href="index.html"><i class="icon-home"></i> Home</a>
+                <a href="#"><i class="icon-bookmarks"></i> Bookmarks</a>
+                <a href="#"><i class="icon-questions"></i> Questions</a>
+                <a href="#"><i class="icon-settings"></i> Settings</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Preetham" alt="User">
+                    <div>
+                        <span class="username">Preetham</span>
+                        <span class="role">Developer</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="dash-header">
+                <div class="search-bar glass">
+                    <input type="text" placeholder="Search courses, docs...">
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn notification-btn">🔔</button>
+                    <button class="btn-primary">Go Pro</button>
+                </div>
+            </header>
+
+            <section class="dash-overview">
+                <div class="welcome-card glass">
+                    <h2>Welcome back, <span class="accent">Preetham</span>!</h2>
+                    <p>You've completed 45% of your Solana Development path. Keep it up!</p>
+                </div>
+
+                <div class="category-filters">
+                    <button class="filter-btn active">Ethereum</button>
+                    <button class="filter-btn">Solana</button>
+                    <button class="filter-btn">Blockchain</button>
+                    <button class="filter-btn">NFTs</button>
+                </div>
+
+                <div class="course-grid">
+                    <div class="course-card glass">
+                        <div class="course-tag">Solana</div>
+                        <h3>Anchor Framework 101</h3>
+                        <p>Learn to build secure smart contracts with Anchor.</p>
+                        <div class="progress-info">
+                            <span>Progress</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                        <button class="btn-card">Continue</button>
+                    </div>
+                    <!-- More cards as needed -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
