@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Block Devs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+  <script type="module" crossorigin src="/assets/main-DfJ-d9GM.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-B0iJuGSZ.css">
+  <link rel="stylesheet" crossorigin href="/assets/dashboard-DucFaOwo.css">
+</head>
+
+<body class="dashboard-page">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="/assets/logo-DXwrT_QX.png" alt="Logo">
+                <span>Block Devs</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="active"><i class="icon-dashboard"></i> Dashboard</a>
+                <a href="index.html"><i class="icon-home"></i> Home</a>
+                <a href="#"><i class="icon-bookmarks"></i> Bookmarks</a>
+                <a href="#"><i class="icon-questions"></i> Questions</a>
+                <a href="#"><i class="icon-settings"></i> Settings</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Preetham" alt="User">
+                    <div>
+                        <span class="username">Preetham</span>
+                        <span class="role">Developer</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="dash-header">
+                <div class="search-bar glass">
+                    <input type="text" placeholder="Search courses, docs...">
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn notification-btn">🔔</button>
+                    <button class="btn-primary">Go Pro</button>
+                </div>
+            </header>
+
+            <section class="dash-overview">
+                <div class="welcome-card glass">
+                    <h2>Welcome back, <span class="accent">Preetham</span>!</h2>
+                    <p>You've completed 45% of your Solana Development path. Keep it up!</p>
+                </div>
+
+                <div class="category-filters">
+                    <button class="filter-btn active" data-cat="All">All</button>
+                    <button class="filter-btn" data-cat="Ethereum">Ethereum</button>
+                    <button class="filter-btn" data-cat="Solana">Solana</button>
+                    <button class="filter-btn" data-cat="Blockchain">Blockchain</button>
+                </div>
+
+                <div class="course-grid" id="course-list-dynamic">
+                    <!-- Dynamic courses will be injected here -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const courseContainer = document.getElementById('course-list-dynamic');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+
+            function renderCourses(category = 'All') {
+                const rawCourses = JSON.parse(localStorage.getItem('bd_courses')) || [];
+                const filtered = category === 'All' ? rawCourses : rawCourses.filter(c => c.tag === category);
+
+                courseContainer.innerHTML = filtered.map(c => `
+                    <div class="course-card glass" onclick="window.location.href='player.html'">
+                        <div class="course-tag">${c.tag}</div>
+                        <h3>${c.title}</h3>
+                        <p>${c.subtitle}</p>
+                        <div class="progress-info">
+                            <span>Progress</span>
+                            <span>${c.progress}%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: ${c.progress}%;"></div></div>
+                        <button class="btn-card">Continue</button>
+                    </div>
+                `).join('');
+
+                if (filtered.length === 0) {
+                    courseContainer.innerHTML = '<p style="color: var(--text-secondary); grid-column: span 3; text-align: center; margin-top: 2rem;">No courses found in this category.</p>';
+                }
+            }
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    renderCourses(btn.dataset.cat);
+                });
+            });
+
+            renderCourses();
+        });
+    </script>
+</body>
+
+</html>

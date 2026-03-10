@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Player | Block Devs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+  <script type="module" crossorigin src="/assets/main-DfJ-d9GM.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/player-D4DCXiVT.css">
+  <link rel="stylesheet" crossorigin href="/assets/style-B0iJuGSZ.css">
+  <link rel="stylesheet" crossorigin href="/assets/dashboard-DucFaOwo.css">
+</head>
+
+<body class="dashboard-page">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="/assets/logo-DXwrT_QX.png" alt="Logo">
+                <span>Block Devs</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html"><i class="icon-dashboard"></i> Dashboard</a>
+                <a href="index.html"><i class="icon-home"></i> Home</a>
+                <a href="#"><i class="icon-bookmarks"></i> Bookmarks</a>
+                <a href="#"><i class="icon-questions"></i> Questions</a>
+                <a href="#"><i class="icon-settings"></i> Settings</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Preetham" alt="User">
+                    <div>
+                        <span class="username">Preetham</span>
+                        <span class="role">Developer</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content (Two Columns for Player) -->
+        <main class="main-content player-layout">
+            <div class="player-main">
+                <header class="dash-header">
+                    <div class="breadcrumb">
+                        <span>Courses</span> / <span>Ethereum Programming</span> / <span class="accent">Basic
+                            Solidity</span>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-secondary">Share</button>
+                    </div>
+                </header>
+
+                <!-- Video Player -->
+                <div class="video-container glass">
+                    <div class="video-placeholder">
+                        <img src="/assets/hero-visual-5RD88Z_z.png" alt="Video Thumbnail" class="video-thumb">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="video-controls">
+                        <div class="progress-wrap">
+                            <div class="progress" style="width: 33%;"></div>
+                        </div>
+                        <div class="controls-row">
+                            <span class="time">01:00 / 03:00</span>
+                            <div class="main-ctas">
+                                <button>⏪</button>
+                                <button>▶</button>
+                                <button>⏩</button>
+                            </div>
+                            <button>Full</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-info">
+                    <h1>Learn Ethereum Programming: The Solidity Mastery Course</h1>
+                    <p>In this module, we dive deep into the fundamentals of Solidity, the primary language for Ethereum
+                        smart contracts.</p>
+                </div>
+
+                <!-- Comments Section -->
+                <section class="comments-section">
+                    <h3>49 Comments</h3>
+                    <div class="comment-input glass">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Preetham" alt="Me">
+                        <input type="text" placeholder="Add a comment...">
+                    </div>
+                    <div class="comment-list">
+                        <div class="comment-item">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Peter" alt="Peter">
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <span class="user-handle">@peter5944</span>
+                                    <span class="timestamp">1 month ago</span>
+                                </div>
+                                <p>Great explanation! This really helped me understand mappings in Solidity.</p>
+                                <div class="comment-actions">
+                                    <button>👍 12</button>
+                                    <button>👎</button>
+                                    <button>Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Course Syllabus / Modules -->
+            <aside class="player-sidebar glass">
+                <h3>Course Content</h3>
+                <div class="module-list">
+                    <div class="module active">
+                        <div class="module-header">
+                            <span>Module 1: Introduction</span>
+                            <span class="badge">12:00</span>
+                        </div>
+                        <div class="lesson-list">
+                            <div class="lesson completed">What is Blockchain?</div>
+                            <div class="lesson current">Solana vs Ethereum</div>
+                        </div>
+                    </div>
+                    <div class="module">
+                        <div class="module-header">
+                            <span>Module 2: Solidity Mastery</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+</body>
+
+</html>

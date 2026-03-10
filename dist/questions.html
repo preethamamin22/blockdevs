@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions | Block Devs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+  <script type="module" crossorigin src="/assets/main-DfJ-d9GM.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-B0iJuGSZ.css">
+  <link rel="stylesheet" crossorigin href="/assets/dashboard-DucFaOwo.css">
+</head>
+
+<body class="dashboard-page">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="/assets/logo-DXwrT_QX.png" alt="Logo">
+                <span>Block Devs</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html"><i class="icon-dashboard"></i> Dashboard</a>
+                <a href="index.html"><i class="icon-home"></i> Home</a>
+                <a href="#"><i class="icon-bookmarks"></i> Bookmarks</a>
+                <a href="#" class="active"><i class="icon-questions"></i> Questions</a>
+                <a href="#"><i class="icon-settings"></i> Settings</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Preetham" alt="User">
+                    <div>
+                        <span class="username">Preetham</span>
+                        <span class="role">Developer</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Questions Content -->
+        <main class="main-content">
+            <header class="dash-header">
+                <div class="search-bar glass">
+                    <input type="text" placeholder="Search questions...">
+                </div>
+                <div class="header-actions">
+                    <button class="btn-primary">Ask Question</button>
+                    <button class="icon-btn">🔔</button>
+                </div>
+            </header>
+
+            <section class="questions-section">
+                <div class="section-title">
+                    <h2>Community <span class="accent">Questions</span></h2>
+                    <p>Learn from and help fellow developers in the Web3 ecosystem.</p>
+                </div>
+
+                <div class="category-filters">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Solana</button>
+                    <button class="filter-btn">Ethereum</button>
+                    <button class="filter-btn">Performance</button>
+                </div>
+
+                <div class="question-list">
+                    <!-- Question 1 -->
+                    <div class="question-card glass">
+                        <div class="question-header">
+                            <div class="user-info">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Harpreet" alt="Harpreet">
+                                <div>
+                                    <span class="username">Harpreet Singh</span>
+                                    <span class="timestamp">Updated 1h ago</span>
+                                </div>
+                            </div>
+                            <div class="question-tags">
+                                <span class="tag pill">Solana</span>
+                                <span class="tag pill">Performance</span>
+                            </div>
+                        </div>
+                        <div class="question-body">
+                            <h3>Why is processing a sorted array faster than processing an unsorted array in
+                                Rust/Anchor?</h3>
+                            <p>I've noticed a significant performance difference when handling complex data structures
+                                in my smart contracts...</p>
+                        </div>
+                        <div class="question-footer">
+                            <div class="stat"><span class="icon">▲</span> 79 Upvotes</div>
+                            <div class="stat"><span class="icon">💬</span> 12 Comments</div>
+                            <button class="btn-card">View Answers</button>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="question-card glass">
+                        <div class="question-header">
+                            <div class="user-info">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Dev" alt="Dev">
+                                <div>
+                                    <span class="username">Dev Kumar</span>
+                                    <span class="timestamp">Updated 5h ago</span>
+                                </div>
+                            </div>
+                            <div class="question-tags">
+                                <span class="tag pill">Ethereum</span>
+                            </div>
+                        </div>
+                        <div class="question-body">
+                            <h3>How to handle reentrancy attacks in Solidity 0.8.x?</h3>
+                            <p>I'm looking for the most efficient way to prevent recursive calls to my deposit/withdraw
+                                functions...</p>
+                        </div>
+                        <div class="question-footer">
+                            <div class="stat"><span class="icon">▲</span> 45 Upvotes</div>
+                            <div class="stat"><span class="icon">💬</span> 6 Comments</div>
+                            <button class="btn-card">View Answers</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

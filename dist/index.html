@@ -12,8 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap"
         rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-ClptIW3u.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DeU4h3Bp.css">
+  <script type="module" crossorigin src="/assets/main-DfJ-d9GM.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-B0iJuGSZ.css">
 </head>
 
 <body>
@@ -91,6 +91,78 @@
             </div>
         </section>
 
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="testimonials">
+            <div class="section-header">
+                <h2>Our <span class="accent">Success Stories</span></h2>
+                <p>Join thousands of developers who have accelerated their careers with Block Devs.</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card glass">
+                    <div class="quote">"Block Devs transformed my understanding of smart contracts. I went from zero to
+                        launching my first DApp in 6 weeks."</div>
+                    <div class="user">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex" alt="Alex">
+                        <div>
+                            <span class="name">Alex Rivers</span>
+                            <span class="title">Smart Contract Engineer @ Web3Lab</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass">
+                    <div class="quote">"The best community and structured learning for Solana. The Anchor framework
+                        course is top-notch."</div>
+                    <div class="user">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah" alt="Sarah">
+                        <div>
+                            <span class="name">Sarah Chen</span>
+                            <span class="title">Lead Developer @ SolanaFi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faqs" id="faqs">
+            <div class="section-header">
+                <h2>Common <span class="accent">Questions</span></h2>
+                <p>Everything you need to know about starting your blockchain journey.</p>
+            </div>
+            <div class="faq-accordion">
+                <div class="faq-item glass">
+                    <div class="faq-question">
+                        <span>Do I need prior coding experience?</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While some basic programming knowledge (like JS or Python) is helpful, our foundations course
+                            is designed to take you from the very beginning.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass">
+                    <div class="faq-question">
+                        <span>Can I learn at my own pace?</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! All our courses are self-paced with lifetime access. You can learn whenever and wherever
+                            it suits you.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass">
+                    <div class="faq-question">
+                        <span>Will I get a certificate upon completion?</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. You'll receive a verifiable NFT certificate upon completing each mastery track.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Footer -->
         <footer>
             <div class="footer-content">
@@ -107,8 +179,8 @@
                     </div>
                     <div class="link-group">
                         <h4>Platform</h4>
-                        <a href="#">Dashboard</a>
-                        <a href="#">Bookmarks</a>
+                        <a href="dashboard.html">Dashboard</a>
+                        <a href="admin.html">Admin Panel</a>
                         <a href="#">Support</a>
                     </div>
                 </div>
@@ -117,6 +189,27 @@
                 &copy; 2026 Block Devs. All rights reserved.
             </div>
         </footer>
+        <!-- Login Modal -->
+        <div class="modal-overlay" id="login-modal">
+            <div class="modal-content glass">
+                <button class="close-modal" id="close-modal">&times;</button>
+                <h3>Welcome <span class="accent">Back</span></h3>
+                <p>Login to access your personalized dashboard.</p>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" id="username" placeholder="e.g. preetham" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn-primary w-full">Login Now</button>
+                    <p class="form-help">Use <b>admin / admin</b> for Admin Panel access.</p>
+                </form>
+            </div>
+        </div>
+
     </div>
 </body>
 
